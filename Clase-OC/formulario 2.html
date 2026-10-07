@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.A. River Plate — Registro de Socios</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="../paginas/css/formulario.css">
+</head>
+<body class="theme-river">
+
+    <!-- Fondo de La Banda Roja con marco Dorado -->
+    <div class="banda-roja-fondo"></div>
+
+    <!-- Capa oscura para overlay -->
+    <div class="pantalla-overlay" id="pantallaOverlay"></div>
+
+    <!-- Header / Encabezado -->
+    <header class="encabezado-superior">
+        
+        <!-- Izquierda: Escudo Pequeño + Marca -->
+        <div class="bloque-header bloque-izquierdo">
+            <a href="index.html" class="logo-contenedor" title="Volver al Inicio">
+                <div class="escudo-box header-escudo-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Club_Atl%C3%A9tico_River_Plate_logo.svg/250px-Club_Atl%C3%A9tico_River_Plate_logo.svg.png" alt="Escudo River Plate" class="escudo-img">
+                </div>
+                <div class="logo-texto">
+                    <span class="subtitulo-marca">CLUB ATLÉTICO</span>
+                    <span class="logo-marca">RIVER PLATE</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Centro: Badge Dorado -->
+        <div class="bloque-header bloque-centro">
+            <span class="badge-pagina-actual">⭐ SOCIOS & FANÁTICOS ⭐</span>
+        </div>
+
+        <!-- Derecha: Menú Hamburguesa -->
+        <div class="bloque-header bloque-derecho">
+            <button class="btn-hamburguesa" id="btnMenu" aria-label="Abrir menú">
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+                <span class="linea-hamburguesa"></span>
+            </button>
+        </div>
+        
+    </header>
+
+    <!-- Menú Desplegable Lateral -->
+    <nav class="nav-desplegable" id="navMenu">
+        <div class="drawer-header">
+            <div class="drawer-brand">
+                <div class="escudo-box drawer-escudo-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Club_Atl%C3%A9tico_River_Plate_logo.svg/250px-Club_Atl%C3%A9tico_River_Plate_logo.svg.png" alt="Escudo River Plate" class="escudo-img">
+                </div>
+                <h2 class="drawer-titulo">Navegación</h2>
+            </div>
+            <button class="btn-cerrar-drawer" id="btnCerrar" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="sobre_nosotros.html">ℹ️ Conóce Más</a></li>
+        </ul>
+        <div class="drawer-footer">
+            <p><strong>C.A. River Plate</strong> — El Más Grande</p>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal / Formulario -->
+    <main class="contenedor-principal">
+        
+        <section class="hero-seccion">
+            <h1 class="hero-titulo">Comunidad <span>River Plate</span></h1>
+            <p class="hero-subtitulo">Registrate para acceder a beneficios exclusivos, sorteos de entradas para El Mâs Monumental e información oficial.</p>
+        </section>
+
+        <!-- Tarjeta del Formulario -->
+        <div class="contenedor-formulario">
+            <form action="#" method="POST" class="tarjeta-form">
+                
+                <div class="form-header">
+                    <div class="escudo-box form-escudo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Club_Atl%C3%A9tico_River_Plate_logo.svg/250px-Club_Atl%C3%A9tico_River_Plate_logo.svg.png" alt="Escudo River Plate" class="escudo-img">
+                    </div>
+                    <span class="form-badge">⚪🔴 REGISTRO OFICIAL</span>
+                    <h2 class="form-titulo">Ingresá tus Datos</h2>
+                </div>
+
+                <!-- Campo Nombre -->
+                <div class="campo-grupo">
+                    <label for="nombre" class="campo-label">Nombre Completo</label>
+                    <div class="input-wrapper">
+                        <span class="input-icono">👤</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" class="campo-input" required>
+                    </div>
+                </div>
+
+                <!-- Campo Contraseña -->
+                <div class="campo-grupo">
+                    <label for="password" class="campo-label">Contraseña</label>
+                    <div class="input-wrapper">
+                        <span class="input-icono">🔒</span>
+                        <input type="password" id="password" name="password" placeholder="Tu clave secreta" class="campo-input" required>
+                    </div>
+                </div>
+
+                <!-- Fila de 2 Columnas -->
+                <div class="form-grid-dos">
+                    <div class="campo-grupo">
+                        <label for="edad" class="campo-label">Edad</label>
+                        <div class="input-wrapper">
+                            <span class="input-icono">🔢</span>
+                            <input type="number" id="edad" name="edad" min="18" max="99" placeholder="Ej: 25" class="campo-input" required>
+                        </div>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="fecha" class="campo-label">Fecha de Nacimiento</label>
+                        <div class="input-wrapper">
+                            <span class="input-icono">📅</span>
+                            <input type="date" id="fecha" name="fecha" class="campo-input" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="campo-checkbox">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-texto">Acepto los términos y condiciones de River Plate.</span>
+                    </label>
+                </div>
+
+                <!-- Botones -->
+                <div class="acciones-form">
+                    <button type="submit" class="btn-submit">
+                        <span>Enviar Datos</span>
+                        <span class="btn-icono">⭐</span>
+                    </button>
+
+                    <a href="index.html" class="btn-volver">
+                        <span class="btn-icono">⬅️</span>
+                        <span>Volver al Index</span>
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pie-menu">
+        <div class="pie-contenido">
+            <div class="seccion-conocenos">
+                <h3 class="pie-titulo">Conóce Más Sobre River</h3>
+                <p class="pie-descripcion">Descubrí la historia de El Más Grande, nuestra gloriosa camiseta y el Estadio Mâs Monumental.</p>
+                <a href="sobre_nosotros.html" class="btn-sobre-nosotros">
+                    <span>MÁS INFORMACIÓN</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+            <p class="pie-texto">Instagram: <strong>@thiago_nadd</strong> &bull; Correo Electrónico: <strong>tjnaddeo@gmail.com</strong></p>
+            <p class="pie-creditos">&copy; Club Atlético River Plate — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script del Menú Lateral -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnMenu = document.getElementById('btnMenu');
+            const btnCerrar = document.getElementById('btnCerrar');
+            const navMenu = document.getElementById('navMenu');
+            const pantallaOverlay = document.getElementById('pantallaOverlay');
+
+            function abrirMenu() {
+                btnMenu.classList.add('activo');
+                navMenu.classList.add('activo');
+                pantallaOverlay.classList.add('activo');
+            }
+
+            function cerrarMenu() {
+                btnMenu.classList.remove('activo');
+                navMenu.classList.remove('activo');
+                pantallaOverlay.classList.remove('activo');
+            }
+
+            if (btnMenu) btnMenu.addEventListener('click', abrirMenu);
+            if (btnCerrar) btnCerrar.addEventListener('click', cerrarMenu);
+            if (pantallaOverlay) pantallaOverlay.addEventListener('click', cerrarMenu);
+        });
+    </script>
+</body>
+</html>
